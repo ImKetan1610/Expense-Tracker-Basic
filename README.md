@@ -26,7 +26,7 @@ Provide fields for title, amount, and date, with validation for required fields.
 **3.2 Add Income Form**
 Provide a field for adding balance in the wallet.
 
-          **3.3 Expense List**
+**3.3 Expense List**
 Display a list of expenses with options to edit or delete each expense.
 
 **3.4 Expense Summary**
