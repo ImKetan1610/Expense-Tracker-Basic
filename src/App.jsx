@@ -1,18 +1,22 @@
 import { useState } from "react";
 import "./App.css";
-import WalletBalance from "./components/WalletBalance";
-import Expense from "./components/Expense";
-import Chart from "./components/Chart";
+import WalletBalance from "./components/WalletBalance/WalletBalance";
+import Expense from "./components/Expense/Expense";
+import Chart from "./components/Chart/Chart";
 
 function App() {
+  let wallet = 5000;
+  localStorage.setItem("Wallet", wallet);
+  let expense = localStorage.getItem("expense") || 0;
+
   return (
     <>
       <div className="App">
         <div className="first">
           <h2>Expense Tracker</h2>
           <div className="dataCard expense">
-            <WalletBalance />
-            <Expense />
+            <WalletBalance wallet ={wallet} />
+            <Expense expense={expense} />
             <Chart />
           </div>
         </div>
